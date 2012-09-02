@@ -38,7 +38,7 @@
 		<version>13.0</version>
 	</dependency>
   </dependencies>
-  
+
   <build>
 	  <plugins>
 		  <plugin>
@@ -75,6 +75,25 @@
 		        </execution>
 		    </executions>
 		  </plugin>
+
+          <plugin>
+            <groupId>org.skife.maven</groupId>
+            <artifactId>really-executable-jar-maven-plugin</artifactId>
+            <version>1.0.5</version>
+            <configuration>
+              <programFile>alias-provisioning</programFile>
+              <!-- <flags>-Xmx1G</flags> -->
+            </configuration>
+
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>really-executable-jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
 	  </plugins>
   </build>
 </project>
