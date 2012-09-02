@@ -11,15 +11,19 @@ java -jar  ~/Dropbox/lib/alias-provisioning.jar -e user@yourdomain.com -d yourdo
 then enjoy:
 
 ```bash
-$ email-aliases -p password
+$ email-aliases
+Password:
 spam@yourdomain.com
 ruwt@yourdomain.com
 aws@yourdomain.com
-$ email-aliases -p password rm spam@yourdomain.com
+$ email-aliases rm spam@yourdomain.com
+Password:
 Removed alias 'spam@yourdomain.com' from 'user@yourdomain.com'
-$ email-aliases -p password add skype@yourdomain.com
+$ email-aliases add skype@yourdomain.com
+Password:
 Added alias 'skype@yourdomain.com' to 'user@yourdomain.com'
-$ email-aliases -p password
+$ email-aliases
+Password:
 ruwt@yourdomain.com
 aws@yourdomain.com
 skype@yourdomain.com

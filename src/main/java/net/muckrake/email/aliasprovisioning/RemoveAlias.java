@@ -12,7 +12,8 @@ public class RemoveAlias extends AliasCommand {
   @Arguments(description = "aliases to remove")
   public List<String> deleteAliases;
 
-  public void run() {
+  @Override
+  public void execute() {
     AliasService service = aliasService(this);
     for (String deleteAlias : deleteAliases) {
       service.rmAlias(userEmail, deleteAlias);

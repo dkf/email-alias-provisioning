@@ -12,7 +12,8 @@ public class AddAlias extends AliasCommand {
   @Arguments(description = "aliases to add")
   public List<String> newAliases;
 
-  public void run() {
+  @Override
+  public void execute() {
     AliasService service = aliasService(this);
     for (String newAlias : newAliases) {
       service.addAlias(userEmail, newAlias);
